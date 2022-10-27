@@ -27,7 +27,10 @@ mod tests {
         assert_eq!(us, String::from("This mod is for handling users."));
 
         let new_user = User::new("westsi", "iamwestsi", 25 as u8);
-        assert_eq!(new_user.get_name(), String::from("westsi"));
+        assert_eq!(new_user.get_name(), &String::from("westsi"));
+        assert_eq!(new_user.get_password(), &String::from("iamwestsi"));
+        assert_eq!(new_user.get_age(), &(25 as u8));
+        assert_eq!(new_user.get_age(), &(25 as u8));
     }
 
 }

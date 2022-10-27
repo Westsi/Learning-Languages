@@ -1,5 +1,4 @@
-#[derive(Debug)]
-#[derive(PartialEq)]
+#[derive(Debug, PartialEq)]
 pub struct User {
     name: String,
     password: String,
@@ -19,12 +18,16 @@ impl User {
         }
     }
 
-    pub fn get_name(&self) -> String {
-        String::from(&self.name)
+    pub fn get_name(&self) -> &String {
+        &self.name
     }
     
-    pub fn get_password(&self) -> String {
-        String::from(&self.password)
+    pub fn get_password(&self) -> &String {
+        &self.password
+    }
+
+    pub fn get_age(&self) -> &u8 {
+        &self.age
     }
 
 }
